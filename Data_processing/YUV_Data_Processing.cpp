@@ -154,6 +154,17 @@ int samplest_yuv420_halfy (char *url, int width, int height, int num)
 	return 0;
 }
 
+/*
+ * @Description:生成YUV420P格式的灰阶测试图
+ * @param: 	width:视频帧的宽度
+ * 			height:视频帧的高度
+ * 			ymin:亮度最小值
+ * 			ymax:亮度最大值
+ * 			barnum:灰阶数量
+ * simplest_yuv420_graybar(640, 360,0,255,10,"graybar_640x360.yuv");
+ * @return: int
+ * @Author: Hurley	2018-12-13
+ */
 int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnum, char *url_out)
 {
 	int barwidth;
@@ -198,7 +209,6 @@ int simplest_yuv420_graybar(int width, int height, int ymin, int ymax, int barnu
 			data_y[j*width+i] = lum_temp;
 		}
 	}
-
 	for(j = 0;j<uv_height;j++)
 	{
 		for (i = 0;i<uv_width; i++)
