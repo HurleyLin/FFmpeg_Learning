@@ -107,7 +107,7 @@ int sample_pcm16le_doublespeed(char *url)
 		{
 			fwrite(sample, 1, 2, fp1);
 
-			fwrite(sample+2, 1, 2, fp1)
+			fwrite(sample+2, 1, 2, fp1);
 		}
 	}
 
