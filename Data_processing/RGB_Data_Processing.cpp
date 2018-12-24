@@ -19,9 +19,9 @@
 /*
  * @Description: 分离RGB24像素数据中的R、G、B分量
  * 一帧宽高分别为w、h的RGB24图像一共占用width*height*3 Byte的存储空间
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			num:视频帧数
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			num		:视频帧数
  * @return: int
  * @Author: Hurley	2018-12-13
  */
