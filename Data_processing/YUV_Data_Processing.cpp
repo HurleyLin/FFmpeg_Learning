@@ -20,9 +20,9 @@
  * @Description: 分离YUV420P像素数据中的Y、U、V分量
  * 一帧YUV420P像素数据一共占用width*height*3/2 Byte的数据
  * 其中前width*height Byte存储Y，接着的width*height*1/4 Byte存储U，最后width*height*1/4 Byte存储V
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			num:视频帧数
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			num		:视频帧数
  * @return: int
  * @Author: Hurley	2018-12-13
  */
@@ -56,9 +56,9 @@ int simplest_yuv420_spilit(char *url, int width, int height, int num)
  * @Description: 分离YUV444P像素数据中的Y、U、V分量
  * 一帧YUV444P像素数据一共占用width*height*3/2 Byte的数据
  * 其中前width*height Byte存储Y，接着的width*height Byte存储U，最后width*height Byte存储V
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			num:视频帧数
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			num		:视频帧数
  * @return: int
  * @Author: Hurley	2018-12-13
  */
@@ -91,9 +91,9 @@ int simplest_yuv444_spilit(char *url, int width, int height, int num)
 /*
  * @Description:将YUV420P像素数据去掉颜色（变成灰度图）
  * 如果想把YUV格式像素数据变成灰度图像，只需要将U、V分量设置成128即可
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			num:视频帧数
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			num		:视频帧数
  * @return: int
  * @Author: Hurley	2018-12-13
  */
@@ -122,9 +122,9 @@ int samplest_yuv420_gray(char *url, int width, int height, int num)
 /*
  * @Description:将YUV420P像素数据的亮度减半
  * 将图像的亮度减半，只要将图像的每个像素的Y值取出来分别进行除以2的工作就可以了
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			num:视频帧数
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			num		:视频帧数
  * @return: int
  * @Author: Hurley	2018-12-13
  */
@@ -156,11 +156,11 @@ int samplest_yuv420_halfy (char *url, int width, int height, int num)
 
 /*
  * @Description:生成YUV420P格式的灰阶测试图
- * @param: 	width:视频帧的宽度
- * 			height:视频帧的高度
- * 			ymin:亮度最小值
- * 			ymax:亮度最大值
- * 			barnum:灰阶数量
+ * @param: 	width	:视频帧的宽度
+ * 			height	:视频帧的高度
+ * 			ymin	:亮度最小值
+ * 			ymax	:亮度最大值
+ * 			barnum	:灰阶数量
  * simplest_yuv420_graybar(640, 360,0,255,10,"graybar_640x360.yuv");
  * @return: int
  * @Author: Hurley	2018-12-13
