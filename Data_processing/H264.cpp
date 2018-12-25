@@ -159,7 +159,7 @@ int GetAnnexbNALU (NALU_t *nalu)
 int simplest_h264_parser(char *url)
 {
 	NALU_t *n;
-	int buffersize = 100000;
+	int buffersize = 100 * 1000;
 
 	FILE *myout = stdout;
 
