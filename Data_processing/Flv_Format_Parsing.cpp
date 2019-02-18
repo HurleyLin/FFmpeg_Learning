@@ -444,9 +444,61 @@ int simplest_flv_parser(char *url)
 				}
 				break;
 			}
+			case TAG_TYPE_VIDEO:
+			{
+				char videotag_str[100] = {0};
+				strcat(videotag_str,"| ");
+				char tagdata_first_byte;
+				tagdata_first_byte = fgetc(ifh);
+				int x = tagdata_first_byte & 0xF0;
+				x = x >> 4;
+				switch(x)
+				{
+					case 1:strcat(videotag_str,"JPEG (currently unused)");break;
+					case 2:strcat(videotag_str,"Sorenson H.263");break;
+					case 3:strcat(videotag_str,"Screen video");break;
+					case 4:strcat(videotag_str,"On2 VP6");break;
+					case 5:strcat(videotag_str,"On2 VP6 with alpha channel");break;
+					case 6:strcat(videotag_str,"Screen video version 2");break;
+					case 7:strcat(videotag_str,"AVC");break;
+					default:strcat(videotag_str,"UNKNOWN");break;
+				}
+				fprintf(myout,"%s",videotag_str);
+
+				fseek(ifh, -1, SEEK_CUR);
+
+				if (vfh == NULL && output_v != 0)
+				{
+					vfh = fopen("output.flv","wb+");
+					fwrite((char *)&flv, 1, sizeof(flv), vfh);
+					fwrite((char *)&previoustagsize_z, 1, sizeof(previoustagsize),vfh);
+				}
+
+				int data_size = reverse_bytes((byte *)tagheader.DataSize,sizeof(tagheader.DataSize))+4;
+				if (output_v != 0)
+				{
+					fwrite((char *)&tagheader, 1, sizeof(tagheader), vfh);
+					for(int i = 0; i < data_size; i++)
+						fputc(fgetc(ifh),vfh);
+				}
+				else
+				{
+					for (int i = 0; i < data_size; i++)
+						fgetc(ifh);
+				}
+
+				fseek(ifh, -4, SEEK_CUR);
+				break;
+			}
+			default:
+				fseek(ifh,reverse_bytes((byte *)&tagheader.DataSize, sizeof(tagheader.DataSize)),SEEK_CUR);
 		}
 
+		fprintf(myout,"\n");
 	}while(!feof(ifh));
+
+	fcloseall();
+	return 0;
 }
 
 
