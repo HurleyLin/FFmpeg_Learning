@@ -1,0 +1,36 @@
+﻿生成启动时间为 2019/2/20 10:46:12。
+     1>项目“E:\FFMPEG2\ffmpeg_simple_player\ffmpeg_simple_player1\ffmpeg_simple_player1.vcxproj”在节点 2 上(build 个目标)。
+     1>PrepareForBuild:
+         正在创建目录“E:\FFMPEG2\ffmpeg_simple_player\Debug\”。
+       InitializeBuildStatus:
+         正在创建“Debug\ffmpeg_simple_player1.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\ffmpeg_simple_player1.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+     1>e:\ffmpeg2\ffmpeg_simple_player\ffmpeg_simple_player1\include\libavutil\common.h(180): warning C4244: “return”: 从“int64_t”转换到“int32_t”，可能丢失数据
+     1>e:\ffmpeg2\ffmpeg_simple_player\ffmpeg_simple_player1\include\libavutil\common.h(239): warning C4244: “参数”: 从“uint64_t”转换到“uint32_t”，可能丢失数据
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Iinclude /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\ffmpeg_simple_player1.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ffmpeg_simple_player1.cpp
+         ffmpeg_simple_player1.cpp
+     1>e:\ffmpeg2\ffmpeg_simple_player\ffmpeg_simple_player1\ffmpeg_simple_player1.cpp(30): warning C4018: “<”: 有符号/无符号不匹配
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\ffmpeg_simple_player1.exe.embed.manifest.res" Debug\ffmpeg_simple_player1_manifest.rc 
+       Link:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.exe" /INCREMENTAL /NOLOGO /LIBPATH:lib avcodec.lib avformat.lib avutil.lib avdevice.lib avfilter.lib postproc.lib swresample.lib swscale.lib SDL.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ffmpeg_simple_player1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.lib" /MACHINE:X86 Debug\ffmpeg_simple_player1.exe.embed.manifest.res
+         Debug\ffmpeg_simple_player1.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\ffmpeg_simple_player1.exe.embed.manifest" /manifest Debug\ffmpeg_simple_player1.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\ffmpeg_simple_player1.exe.embed.manifest.res" Debug\ffmpeg_simple_player1_manifest.rc 
+       LinkEmbedManifest:
+         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.exe" /INCREMENTAL /NOLOGO /LIBPATH:lib avcodec.lib avformat.lib avutil.lib avdevice.lib avfilter.lib postproc.lib swresample.lib swscale.lib SDL.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ffmpeg_simple_player1.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.lib" /MACHINE:X86 Debug\ffmpeg_simple_player1.exe.embed.manifest.res
+         Debug\ffmpeg_simple_player1.obj
+         Debug\stdafx.obj
+         ffmpeg_simple_player1.vcxproj -> E:\FFMPEG2\ffmpeg_simple_player\Debug\ffmpeg_simple_player1.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\ffmpeg_simple_player1.unsuccessfulbuild”。
+         正在对“Debug\ffmpeg_simple_player1.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“E:\FFMPEG2\ffmpeg_simple_player\ffmpeg_simple_player1\ffmpeg_simple_player1.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:04.53
